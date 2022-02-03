@@ -23,6 +23,7 @@ public class WaitNotify extends AppCompatActivity {
         btnThreadTwo.setOnClickListener(this::onClickThreadTwo);
     }
 
+
     private void sendData(){
         Log.d("my_log", "поток 1 пробует захватить monitor");
         synchronized (monitor){

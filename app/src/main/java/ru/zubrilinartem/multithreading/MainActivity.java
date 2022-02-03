@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Button btnNotify = findViewById(R.id.btnNotify);
         btnNotify.setOnClickListener(this::onClickNotify);
 
+        Button btnLooper = findViewById(R.id.btnLooper);
+        btnLooper.setOnClickListener(this::onClickLooper);
+
     }
 
     private void onClickExample(View view){
@@ -28,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void onClickNotify(View view){
         Intent intent = new Intent(this, WaitNotify.class);
+        startActivity(intent);
+    }
+
+    private void onClickLooper(View view){
+        Intent intent = new Intent(this, LooperActivity.class);
         startActivity(intent);
     }
 }

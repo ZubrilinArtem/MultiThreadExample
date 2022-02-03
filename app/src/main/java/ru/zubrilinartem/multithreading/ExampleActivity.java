@@ -44,16 +44,21 @@ public class ExampleActivity extends AppCompatActivity implements SeekBar.OnSeek
         tvCount.setText(String.valueOf(count));
     }
 
-    public void onClickLongOperation(View v){
-//        try {
-//            Thread.sleep(time);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+    public void onClickLongOperation(View v) {
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                tvResult.setText("asdasd");
+//                try {
+                    tvResult.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            tvResult.setText("test" + "one");
+                        }
+                    });
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
             }
         }).start();
     }

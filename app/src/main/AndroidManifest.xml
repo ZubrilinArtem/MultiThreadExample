@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiThreading">
         <activity
+            android:name=".LooperActivity"
+            android:exported="false" />
+        <activity
             android:name=".WaitNotify"
             android:exported="false" />
         <activity
